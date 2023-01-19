@@ -23,10 +23,27 @@ h1{
   font-weight: bold;
 }
 img{
-  width: 80px;
+  width: 50px;
+  border-radius: 50%;
+}
+.item-list{
+  background: #222222;
+  border-radius: 20px;
 }
 .item{
-  /* background: #222222; */
-  background: beige;
-  border: 1px solid grey;
+  border-bottom: 1px solid #1f1f1f;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+}
+main{
+  color: #caf0f8;
+}
+.description span{
+  font-weight: bold;
+  
+}
+.description p{
+  font-size: 0.8rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }

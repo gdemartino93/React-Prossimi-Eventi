@@ -4,13 +4,19 @@ import { useState } from 'react'
 const AppContent = () => {
     const [people,SetPeople] = useState(Events);
   return (
-    <div className='container d-flex justify-content-center flex-column align-items-center'>
+    <div className='container d-flex justify-content-center flex-column align-items-center item-list col-5 my-5'>
         {people.map(el=>{
-        return <div className='item col-5'>
-                    <img src={el.img}></img>
-                    <span>{el.nome}</span>
+        return <div className='item'>
+                    <div className='foto'>
+                        <img src={el.img}></img>
+                    </div>
+                    <div className='mx-3 description'> 
+                        <span>{el.nome}</span>
+                        <p>{el.stato}</p>
+                    </div>
+
                     
-                    <p>{el.stato}</p>
+                    
             </div>
     })}</div>
   )
