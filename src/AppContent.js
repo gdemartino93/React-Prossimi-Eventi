@@ -7,10 +7,13 @@ import {faDeleteLeft} from '@fortawesome/free-solid-svg-icons'
 
 const AppContent = () => {
     const [people,SetPeople] = useState(Events);
+    const removeEvent = (id) =>{
+        SetPeople((oldValue) => oldValue.filter((value) => value.id !== id))
+    }
   return (
     <div className='container d-flex justify-content-center flex-column align-items-center item-list col-5 my-5'>
         {people.map(el=>{
-        return <div className='item'>
+        return <div className='item' key={el.id}>
                     <div className='foto'>
                         <img src={el.img}></img>
                     </div>
@@ -20,7 +23,7 @@ const AppContent = () => {
                             <p>{el.stato}</p>
                         </div>
                         <div className='delete'>
-                        <FontAwesomeIcon icon={faDeleteLeft}/>
+                        <FontAwesomeIcon icon={faDeleteLeft} onClick={()=>removeEvent(el.id)}/>
                         </div>
 
                         
