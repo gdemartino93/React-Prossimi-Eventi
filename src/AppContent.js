@@ -7,8 +7,9 @@ import {faDeleteLeft} from '@fortawesome/free-solid-svg-icons'
 
 const AppContent = () => {
     const [people,SetPeople] = useState(Events);
+
     const removeEvent = (id) =>{
-        SetPeople((oldValue) => oldValue.filter((value) => value.id !== id))
+        SetPeople(people => people.filter(person => person.id !== id));
     }
   return (
     <div className='container d-flex justify-content-center flex-column align-items-center item-list col-5 my-5'>
