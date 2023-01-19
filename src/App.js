@@ -1,9 +1,10 @@
-
+import AppHeader from "./AppHeader";
 function App() {
   return (
     <div className="App">
-
-    <input name="" id="asd" class="btn btn-primary" type="button" value="CANCELLA" />
+      <header>
+        <AppHeader/>
+      </header>
 
     </div>
   );
