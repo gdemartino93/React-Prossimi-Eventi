@@ -1,6 +1,10 @@
 import React from 'react'
 import Events from './data'
 import { useState } from 'react'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faDeleteLeft} from '@fortawesome/free-solid-svg-icons'
+
+
 const AppContent = () => {
     const [people,SetPeople] = useState(Events);
   return (
@@ -10,9 +14,16 @@ const AppContent = () => {
                     <div className='foto'>
                         <img src={el.img}></img>
                     </div>
-                    <div className='mx-3 description'> 
-                        <span>{el.nome}</span>
-                        <p>{el.stato}</p>
+                    <div className='mx-3 description d-flex'> 
+                        <div>
+                            <span>{el.nome}</span>
+                            <p>{el.stato}</p>
+                        </div>
+                        <div className='delete'>
+                        <FontAwesomeIcon icon={faDeleteLeft}/>
+                        </div>
+
+                        
                     </div>
 
                     

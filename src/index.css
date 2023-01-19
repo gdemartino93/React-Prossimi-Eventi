@@ -35,6 +35,7 @@ img{
   display: flex;
   padding: 10px;
   width: 100%;
+  position: relative;
 }
 main{
   color: #caf0f8;
@@ -46,4 +47,14 @@ main{
 .description p{
   font-size: 0.8rem;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.delete{
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(-50%,-50%);
 }
