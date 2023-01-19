@@ -22,3 +22,11 @@ h1{
   color: #caf0f8;
   font-weight: bold;
 }
+img{
+  width: 80px;
+}
+.item{
+  /* background: #222222; */
+  background: beige;
+  border: 1px solid grey;
+}
