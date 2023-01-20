@@ -36,9 +36,12 @@ const AppContent = () => {
                     </div>           
                 </div>})}
     </div>
+    <div className={people.length==0 ? "container col-5 text-center my-5" : "d-none"}>
+        <span className='fs-1'>Non ci sono eventi che ti interessano, prova ad aggiornare la lista!</span>
+    </div>
     <div className='container col-5 justify-content-between d-flex'>
         <button className='btn btn-primary' onClick={reloadEvent}>Ricarica eventi</button>     
-        <button className='btn btn-outline-danger' onClick={removeAll}>Rimuovi tutti</button>
+        <button className={people.length > 0 ? "btn btn-outline-danger" : "d-none"} onClick={removeAll}>Rimuovi tutti</button>
     </div>
     </React.Fragment>     
   )
