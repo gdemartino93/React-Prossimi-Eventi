@@ -10,8 +10,15 @@ const AppContent = () => {
 
     const removeEvent = (id) =>{
         SetPeople(people => people.filter(person => person.id !== id));
-    }
+    };
+    const reloadEvent = () =>{
+        SetPeople(Events);
+    };
+    const removeAll = () =>{
+        SetPeople(people.slice(0,0))
+    };
   return (
+    <React.Fragment>
     <div className='container d-flex justify-content-center flex-column align-items-center item-list col-5 my-5'>
         {people.map(el=>{
         return <div className='item' key={el.id}>
@@ -25,15 +32,15 @@ const AppContent = () => {
                         </div>
                         <div className='delete'>
                         <FontAwesomeIcon icon={faDeleteLeft} onClick={()=>removeEvent(el.id)}/>
-                        </div>
-
-                        
-                    </div>
-
-                    
-                    
-            </div>
-    })}</div>
+                        </div>                        
+                    </div>           
+                </div>})}
+    </div>
+    <div className='container col-5 justify-content-between d-flex'>
+        <button className='btn btn-primary' onClick={reloadEvent}>Ricarica eventi</button>     
+        <button className='btn btn-outline-danger' onClick={removeAll}>Rimuovi tutti</button>
+    </div>
+    </React.Fragment>     
   )
 }
 
